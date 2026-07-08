@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+Planner | Cherrie 🍒
+{% endblock %}
+
+
+{% block body_class %}
+planner-page
+{% endblock %}
+
+
+{% block content %}
+
+<section class="planner glass-card">
+
+    <h1>
+        Daily Planner 🌸
+    </h1>
+
+
+    <div class="task-input">
+
+        <input 
+            id="task-input"
+            type="text"
+            placeholder="Add a little goal..."
+        >
+
+        <button class="btn" onclick="addTask()">
+            Add
+        </button>
+
+    </div>
+
+
+    <div class="tasks" id="task-list">
+
+    </div>
+
+
+</section>
+
+{% endblock %}

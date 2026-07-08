@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        {% block title %}Cherrie 🍒{% endblock %}
+    </title>
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Emily%27s+Candy&display=swap" 
+          rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/animations.css') }}">
+
+
+</head>
+
+
+<body class="{% block body_class %}{% endblock %}">
+
+
+<header>
+
+<nav class="navbar">
+
+
+<a href="{{ url_for('home') }}" class="logo">
+
+    <img src="{{ url_for('static', filename='images/icons/cherry.svg') }}"
+         alt="Cherry Logo">
+
+    <span>Cherrie</span>
+
+</a>
+
+
+
+<div class="nav-links">
+
+
+<a href="{{ url_for('home') }}">
+
+    <img src="{{ url_for('static', filename='images/icons/home.svg') }}"
+         alt="Home">
+
+    Home
+
+</a>
+
+
+
+<a href="{{ url_for('chat') }}">
+
+    <img src="{{ url_for('static', filename='images/icons/message.svg') }}"
+         alt="Chat">
+
+    Chat
+
+</a>
+
+
+
+<a href="{{ url_for('planner') }}">
+
+    <img src="{{ url_for('static', filename='images/icons/calendar.svg') }}"
+         alt="Planner">
+
+    Planner
+
+</a>
+
+
+
+<a href="{{ url_for('focus') }}">
+
+    <img src="{{ url_for('static', filename='images/icons/timer.svg') }}"
+         alt="Focus">
+
+    Focus
+
+</a>
+
+
+
+<a href="{{ url_for('habits') }}">
+
+    <img src="{{ url_for('static', filename='images/icons/sprout.svg') }}"
+         alt="Habits">
+
+    Habits
+
+</a>
+
+
+</div>
+
+
+</nav>
+
+</header>
+
+
+
+<main>
+
+{% block content %}
+
+{% endblock %}
+
+</main>
+
+
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</body>
+
+</html>

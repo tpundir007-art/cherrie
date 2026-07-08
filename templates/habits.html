@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}
+Habits | Cherrie 🍒
+{% endblock %}
+
+
+{% block body_class %}
+habits-page
+{% endblock %}
+
+
+{% block content %}
+
+<section class="habits glass-card">
+
+    <h1>
+        Build Better Habits 🌱
+    </h1>
+
+
+   <div class="habit-input">
+
+    <input 
+        id="habit-input"
+        type="text"
+        placeholder="Add a healthy habit 🌱"
+    >
+
+    <button 
+        class="btn"
+        onclick="addHabit()">
+
+        Add
+
+    </button>
+
+</div>
+
+
+<div 
+class="habit-list"
+id="habit-list">
+
+</div>
+
+
+   <div class="habit-input">
+
+    <input 
+        id="habit-input"
+        placeholder="Add a healthy habit 🌱"
+    >
+
+    <button 
+        class="btn"
+        onclick="addHabit()">
+
+        Add
+
+    </button>
+
+</div>
+
+
+<div 
+class="habit-list"
+id="habit-list">
+
+</div>
+
+
+</section>
+
+{% endblock %}

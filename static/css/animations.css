@@ -1,0 +1,1082 @@
+/*==================================================
+                CHERRIE ANIMATIONS
+====================================================*/
+
+
+/*=========================
+        VARIABLES
+==========================*/
+
+:root{
+
+    --slow:16s;
+
+    --medium:8s;
+
+    --fast:.35s;
+
+}
+
+
+
+/*=========================
+        FLOAT
+==========================*/
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.float{
+
+    animation:float var(--slow) ease-in-out infinite;
+
+}
+
+
+
+/*=========================
+        FADE UP
+==========================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+
+
+/*=========================
+      FADE IN
+==========================*/
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+.fade{
+
+    animation:fade 1s ease;
+
+}
+
+
+
+/*=========================
+      SCALE POP
+==========================*/
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(.7);
+
+    }
+
+    70%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.pop{
+
+    animation:pop .45s ease;
+
+}
+
+
+
+/*=========================
+      BUTTON PRESS
+==========================*/
+
+.press{
+
+    transition:.2s;
+
+}
+
+.press:active{
+
+    transform:scale(.96);
+
+}
+
+
+
+/*=========================
+      CARD LIFT
+==========================*/
+
+.lift{
+
+    transition:.35s;
+
+}
+
+.lift:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/*=========================
+      ICON BOUNCE
+==========================*/
+
+@keyframes iconBounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    30%{
+
+        transform:translateY(-5px);
+
+    }
+
+    60%{
+
+        transform:translateY(2px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.icon-bounce:hover{
+
+    animation:iconBounce .45s;
+
+}
+
+
+
+/*=========================
+      SHIMMER
+==========================*/
+
+@keyframes shimmer{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:150%;
+
+    }
+
+}
+/*==================================================
+        FLOATING DECORATIONS
+====================================================*/
+
+
+/*=========================
+        FLOATING BLOBS
+==========================*/
+
+.blob{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.18;
+
+    pointer-events:none;
+
+    z-index:-5;
+
+    animation:blobFloat 18s ease-in-out infinite;
+
+}
+
+.blob-1{
+
+    width:280px;
+
+    height:280px;
+
+    background:#EACFD9;
+
+    top:8%;
+
+    left:-80px;
+
+}
+
+.blob-2{
+
+    width:360px;
+
+    height:360px;
+
+    background:#F2CECD;
+
+    bottom:-80px;
+
+    right:-100px;
+
+    animation-delay:4s;
+
+}
+
+.blob-3{
+
+    width:220px;
+
+    height:220px;
+
+    background:#FECD6D;
+
+    top:55%;
+
+    left:55%;
+
+    opacity:.12;
+
+    animation-delay:8s;
+
+}
+
+
+@keyframes blobFloat{
+
+    0%{
+
+        transform:translateY(0px) translateX(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-25px) translateX(20px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px) translateX(0px);
+
+    }
+
+}
+
+
+
+/*=========================
+      FLOATING BUBBLES
+==========================*/
+
+.bubble{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(6px);
+
+    pointer-events:none;
+
+    animation:bubbleFloat linear infinite;
+
+    z-index:-4;
+
+}
+
+.bubble-1{
+
+    width:18px;
+
+    height:18px;
+
+    left:8%;
+
+    bottom:-30px;
+
+    animation-duration:18s;
+
+}
+
+.bubble-2{
+
+    width:12px;
+
+    height:12px;
+
+    left:28%;
+
+    bottom:-20px;
+
+    animation-duration:24s;
+
+}
+
+.bubble-3{
+
+    width:24px;
+
+    height:24px;
+
+    left:52%;
+
+    bottom:-30px;
+
+    animation-duration:20s;
+
+}
+
+.bubble-4{
+
+    width:15px;
+
+    height:15px;
+
+    left:74%;
+
+    bottom:-25px;
+
+    animation-duration:22s;
+
+}
+
+.bubble-5{
+
+    width:20px;
+
+    height:20px;
+
+    left:92%;
+
+    bottom:-30px;
+
+    animation-duration:26s;
+
+}
+
+
+@keyframes bubbleFloat{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:.35;
+
+    }
+
+    85%{
+
+        opacity:.2;
+
+    }
+
+    to{
+
+        transform:translateY(-115vh);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/*=========================
+        SPARKLES
+==========================*/
+
+.sparkle{
+
+    position:fixed;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 0 10px white;
+
+    pointer-events:none;
+
+    animation:twinkle 3.5s infinite;
+
+    z-index:-4;
+
+}
+
+.sparkle:nth-child(1){
+
+    top:18%;
+
+    left:15%;
+
+}
+
+.sparkle:nth-child(2){
+
+    top:32%;
+
+    right:12%;
+
+}
+
+.sparkle:nth-child(3){
+
+    bottom:22%;
+
+    left:40%;
+
+}
+
+.sparkle:nth-child(4){
+
+    top:68%;
+
+    right:28%;
+
+}
+
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.2;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.8);
+
+    }
+
+}
+
+
+
+/*=========================
+      WALLPAPER GLOW
+==========================*/
+
+.wallpaper-glow{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at 15% 25%, rgba(242,206,205,.18), transparent 30%),
+        radial-gradient(circle at 85% 15%, rgba(181,114,138,.12), transparent 35%),
+        radial-gradient(circle at 50% 85%, rgba(254,205,109,.10), transparent 40%);
+
+    pointer-events:none;
+
+    z-index:-6;
+
+    animation:glowShift 20s ease-in-out infinite;
+
+}
+
+@keyframes glowShift{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+/*==================================================
+            INTERACTIVE ANIMATIONS
+====================================================*/
+
+
+/*=========================
+        CHAT MESSAGES
+==========================*/
+
+.message{
+
+    animation:messageSlide .45s ease;
+
+}
+
+@keyframes messageSlide{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*=========================
+        TYPING DOTS
+==========================*/
+
+.typing{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.typing span{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    animation:typing 1.2s infinite;
+
+}
+
+.typing span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.typing span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+@keyframes typing{
+
+    0%,80%,100%{
+
+        transform:scale(.6);
+
+        opacity:.35;
+
+    }
+
+    40%{
+
+        transform:scale(1.2);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/*=========================
+        TIMER PULSE
+==========================*/
+
+.timer-circle.running{
+
+    animation:pulseTimer 2.5s infinite;
+
+}
+
+@keyframes pulseTimer{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(147,59,91,.15);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 45px rgba(147,59,91,.28);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(147,59,91,.15);
+
+    }
+
+}
+
+
+
+/*=========================
+        STREAK POP
+==========================*/
+
+.streak-box.complete{
+
+    animation:streakPop .4s ease;
+
+}
+
+@keyframes streakPop{
+
+    0%{
+
+        transform:scale(.5);
+
+    }
+
+    60%{
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+/*=========================
+        HABIT COMPLETE
+==========================*/
+
+.habit-card.complete{
+
+    animation:habitDone .55s ease;
+
+}
+
+@keyframes habitDone{
+
+    0%{
+
+        transform:scale(.96);
+
+    }
+
+    60%{
+
+        transform:scale(1.03);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+/*=========================
+        RIPPLE EFFECT
+==========================*/
+
+.ripple{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ripple::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:12px;
+
+    height:12px;
+
+    background:rgba(255,255,255,.4);
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    opacity:0;
+
+}
+
+.ripple:active::after{
+
+    animation:ripple .6s ease;
+
+}
+
+@keyframes ripple{
+
+    0%{
+
+        transform:scale(0);
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        transform:scale(20);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/*=========================
+        SUCCESS GLOW
+==========================*/
+
+.success{
+
+    animation:successGlow .8s ease;
+
+}
+
+@keyframes successGlow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(181,114,138,0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 35px rgba(181,114,138,.35);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(181,114,138,0);
+
+    }
+
+}
+
+
+
+/*=========================
+        PAGE LOAD
+==========================*/
+
+.page-enter{
+
+    animation:pageEnter .8s ease;
+
+}
+
+@keyframes pageEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*=========================
+        SPIN
+==========================*/
+
+.spin{
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+/*=========================
+        SHAKE
+==========================*/
+
+.shake{
+
+    animation:shake .4s;
+
+}
+
+@keyframes shake{
+
+    0%,100%{
+
+        transform:translateX(0);
+
+    }
+
+    25%{
+
+        transform:translateX(-4px);
+
+    }
+
+    50%{
+
+        transform:translateX(4px);
+
+    }
+
+    75%{
+
+        transform:translateX(-2px);
+
+    }
+
+}
+
+
+
+/*=========================
+        HEARTBEAT
+==========================*/
+
+.heartbeat{
+
+    animation:heartbeat 2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    25%{
+
+        transform:scale(1.05);
+
+    }
+
+    50%{
+
+        transform:scale(.98);
+
+    }
+
+    75%{
+
+        transform:scale(1.03);
+
+    }
+
+}
+
+
+
+/*=========================
+        SPARKLE BURST
+==========================*/
+
+.sparkle-burst{
+
+    position:relative;
+
+}
+
+.sparkle-burst::before{
+
+    content:"✨";
+
+    position:absolute;
+
+    top:-12px;
+
+    right:-10px;
+
+    opacity:0;
+
+}
+
+.sparkle-burst.active::before{
+
+    animation:sparkBurst .8s ease;
+
+}
+
+@keyframes sparkBurst{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.4);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-12px);
+
+    }
+
+}

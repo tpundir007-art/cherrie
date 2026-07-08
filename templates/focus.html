@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}
+Focus | Cherrie 🍒
+{% endblock %}
+
+
+{% block body_class %}
+focus-page
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="focus-layout">
+
+
+<div class="timer-card glass-card">
+
+
+<h1>
+Focus Mode 🍅
+</h1>
+
+
+<div class="timer-circle">
+
+
+<div 
+class="timer-time"
+id="timer">
+
+25:00
+
+</div>
+
+
+</div>
+
+
+
+<div class="timer-controls">
+
+
+<button 
+class="btn"
+onclick="startTimer()">
+
+Start
+
+</button>
+
+
+
+<button 
+class="btn secondary"
+onclick="pauseTimer()">
+
+Pause
+
+</button>
+
+
+
+<button 
+class="btn"
+onclick="resetTimer()">
+
+Reset
+
+</button>
+
+
+</div>
+
+
+
+<h2>
+
+Today's Focus:
+
+<span id="pomodoro-count">
+0
+</span>
+
+🍅
+
+</h2>
+
+
+</div>
+
+
+
+<div class="notes-card glass-card">
+
+
+<h2>
+Little Notes 📝
+</h2>
+
+
+<textarea
+id="focus-notes"
+placeholder="Write thoughts here...">
+
+</textarea>
+
+
+</div>
+
+
+</section>
+
+
+{% endblock %}
